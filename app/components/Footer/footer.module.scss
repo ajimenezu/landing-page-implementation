@@ -1,0 +1,43 @@
+@use 'styles/variables';
+
+.footerContainer {
+  background-color: variables.$secondary-gray;
+  height: 221px;
+  @apply
+    flex
+    justify-between
+    px-[20px]
+    py-[31px]
+    md:px-[40px]
+}
+
+.linksSection {
+  @apply
+    flex
+    flex-col
+    justify-between
+}
+
+.titleSection {
+  @apply
+    text-[22px]
+    font-normal
+    md:text-[32px]
+    md:font-bold
+}
+
+.contactsSection {
+  @apply
+    flex
+    flex-col
+    text-[11px]
+    font-medium
+    md:text-xs
+}
+
+.termsAndConditionSection {
+  color: variables.$primary-gray;
+  @apply
+    text-xs
+    font-medium
+}

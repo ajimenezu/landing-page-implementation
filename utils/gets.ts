@@ -1,6 +1,8 @@
 export const getLandingPageData = async () => {
+  const API_URL = process.env.CMS_API_URL || ''
+
   try {
-    const response = await fetch(process.env.CMS_API_URL)
+    const response = await fetch(API_URL)
     if (!response.ok) {
       console.error(`Error Fetching CMS data: ${response.text()}`)
       throw new Error('Error Fetching CMS data')

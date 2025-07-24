@@ -1,0 +1,21 @@
+@use 'styles/variables';
+
+.card {
+  @apply
+    flex
+    flex-col
+    gap-[19px]
+}
+
+.textWithoutDescription {
+  @apply
+    flex
+    justify-center
+}
+
+.cardDescription {
+  color: variables.$text-subhead;
+  @apply
+    text-[11px]
+    font-medium
+}

@@ -1,10 +1,12 @@
+@use 'styles/variables';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: variables.$primary-white;
+  --foreground: variables.$primary-black;
 }
 
 html,
@@ -13,10 +15,18 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+
+  
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,8 +42,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

@@ -1,0 +1,26 @@
+@use 'styles/variables';
+
+.sectionContainer {
+  @apply
+    flex
+    flex-col
+    py-[50px]
+    px-[20px]
+    gap-[30px]
+}
+
+.sectionTitle {
+  color: variables.$secondary-purple;
+  @apply
+    flex
+    w-full
+    justify-center
+}
+
+.sectionCards {
+  @apply
+    flex
+    flex-col
+    gap-[20px]
+    justify-center
+}

@@ -1,14 +1,6 @@
 .container {
   @apply 
     flex 
-    justify-center 
-    items-center 
-    h-screen
-}
-
-.text {
-  @apply 
-    text-red-50 
-    text-lg 
-    font-extrabold
+    flex-col
+    justify-center
 }

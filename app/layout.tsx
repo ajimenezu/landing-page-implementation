@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Manrope } from "next/font/google";
 import "@/styles/globals.scss";
-import Header from '@/app/components/Header/Header'
+import Header from '@components/Header/Header'
+import Footer from "@components/Footer/Footer";
 import { getLandingPageData } from "@/utils/gets";
 
 const geistSans = Geist({
@@ -12,6 +13,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const manrope = Manrope({
+  subsets: ['latin'], // Specify the necessary subsets
+  display: 'swap',    // Recommended for optimal loading
+  variable: '--font-manrope', // Optional: for use with CSS variables
 });
 
 export const metadata: Metadata = {
@@ -26,14 +33,16 @@ export default async function RootLayout({
 }>) {
   const data = await getLandingPageData()
 
+  const { footer, header } = data || {}
   console.log(data)
 
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header data={data.header} />
+      <body className={`${manrope.variable}`}>
+        <Header companyName={header.company_name} menuItems={header.menu_items} />
         {children}
+        <Footer footerTitle={footer.footer_title} contactLinks={footer.contact_links} />
       </body>
     </html>
   );
