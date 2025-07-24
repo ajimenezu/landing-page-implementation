@@ -1,0 +1,57 @@
+@use 'styles/variables.scss';
+
+.header {
+  height: 157px;
+  background-color: variables.$secondary-purple;
+}
+
+.headerContainer {
+  @apply
+    h-full
+    flex
+    flex-col
+    items-start
+    justify-center
+    gap-[40px]
+    px-[20px]
+
+    md:flex-row
+    md:px-[40px]
+    md:py-[20px]
+    md:gap-0
+    md:justify-between
+}
+
+.companyName {
+  @apply
+    text-[22px]
+    font-semibold
+    text-white
+}
+
+.navMenu {
+  @apply
+    md:flex
+    md:h-full
+    md:justify-end
+    md:pb-[30px]
+}
+
+.menuItems {
+  @apply
+    flex
+    gap-3
+    justify-between
+
+    md:self-end
+}
+
+.menuItem {
+  color: variables.$primary-light-blue;
+  @apply
+    text-xs
+    font-medium
+    hover:underline
+
+    md:text-base
+}
