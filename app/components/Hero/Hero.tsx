@@ -27,7 +27,7 @@ const Hero = (props: HeroProps) => {
         width={currentImage.width}
         height={currentImage.height}
         priority
-        style={{ width: '100%', height: '100%'}}
+        style={{ width: '100%', height: 'auto' }}
       />
     </div>
   );

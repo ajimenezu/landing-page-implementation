@@ -15,6 +15,12 @@
     flex
     w-full
     justify-center
+    
+}
+
+.title {
+  @apply
+    md:text-[42px]
 }
 
 .sectionCards {
@@ -23,4 +29,5 @@
     flex-col
     gap-[20px]
     justify-center
+    md:flex-row
 }

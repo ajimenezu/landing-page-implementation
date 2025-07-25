@@ -6,7 +6,7 @@ const Section = (props: SectionProps) => {
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.sectionTitle}>
-        <h2>{props.title}</h2>
+        <h2 className={styles.title}>{props.title}</h2>
       </div>
       <div className={styles.sectionCards}>
         {props.imageTile.map((tile, index) => (
