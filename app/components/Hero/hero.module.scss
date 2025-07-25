@@ -9,3 +9,14 @@
     justify-center
     items-center
 }
+
+.heroTitle {
+  transform: translate(-50%, -50%);
+  @apply
+    text-[36px]
+    text-white
+    absolute
+    top-[50%]
+    left-[50%]
+    text-center
+}

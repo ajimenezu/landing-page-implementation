@@ -6,6 +6,9 @@ import Hero from '@components/Hero/Hero'
 import Section from '@components/Section/Section'
 import { notFound } from 'next/navigation'
 
+// Title for hero section - needs implementation on CMS
+const HERO_TITLE = 'Optimize Company Spending'
+
 export default async function Home() {
   let isMobileBreakpoint = false
   const data = await getLandingPageData()
@@ -28,7 +31,7 @@ export default async function Home() {
 
   return (
     <div className={styles.container}>
-      <Hero heroImage={hero_image} isMobile={isMobileBreakpoint}/>
+      <Hero heroTitle={HERO_TITLE} heroImage={hero_image} isMobile={isMobileBreakpoint}/>
       <Section title={row_1.title} imageTile={row_1.image_tile} />
       <Section title={row_2.title} imageTile={row_2.image_tile} />
     </div>

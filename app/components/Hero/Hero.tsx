@@ -22,6 +22,8 @@ const Hero = (props: HeroProps) => {
 
   return (
     <div className={styles.heroContainer}>
+      {/* Implemented to hance SEO - CMS implementation missing */}
+      <h1 className={styles.heroTitle}>{props.heroTitle}</h1>
       <Image
         src={currentImage.url}
         alt={currentImage.title}
