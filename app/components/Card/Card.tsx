@@ -16,7 +16,7 @@ const Card = (props: CardProps) => {
         />
       </div>
       <div className={description ? '' : styles.textWithoutDescription}>
-        <h3>{title}</h3>
+        <h3 className={styles.cardTitle}>{title}</h3>
         {description && <p className={styles.cardDescription}>{description}</p>}
       </div>
     </div>

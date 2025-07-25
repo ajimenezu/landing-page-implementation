@@ -16,6 +16,7 @@ const Hero = (props: HeroProps) => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
+    // Change the current image to use according with the breakpoint to handle mobile and desktop images
     setCurrentImage(isDesktop ? desktop_image : mobile_image);
   }, [isDesktop]);
 

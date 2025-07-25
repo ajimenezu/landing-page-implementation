@@ -6,7 +6,7 @@ const Footer = (props: FooterProps) => {
   const { footerTitle, contactLinks } = props
 
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className={styles.footerContainer}>
         <div className={styles.titleSection}>
           <h2>{footerTitle}</h2>
@@ -18,6 +18,7 @@ const Footer = (props: FooterProps) => {
             ))}
           </div>
           <div className={styles.termsAndConditionSection}>
+            {/** This is in the design but is missing in the CMS configuration */}
             <p>Privacy</p>
           </div>
         </div>

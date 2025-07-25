@@ -1,14 +1,21 @@
 @use 'styles/variables';
 
-.footerContainer {
+.footer {
   background-color: variables.$secondary-gray;
   height: 221px;
+}
+
+.footerContainer {
   @apply
     flex
     justify-between
     px-[20px]
     py-[31px]
+
     md:px-[40px]
+
+    xl:max-w-7xl
+    xl:mx-auto
 }
 
 .linksSection {
@@ -16,6 +23,7 @@
     flex
     flex-col
     justify-between
+    md:h-[144px]
 }
 
 .titleSection {

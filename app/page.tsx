@@ -4,13 +4,27 @@ import { isMobile } from '@/utils/breakpoints'
 import { headers } from "next/headers"
 import Hero from '@components/Hero/Hero'
 import Section from '@components/Section/Section'
+import { notFound } from 'next/navigation'
 
 export default async function Home() {
+  let isMobileBreakpoint = false
   const data = await getLandingPageData()
+
+  if (!data) {
+    notFound()
+  }
+
+  // Prevent the page from breaking in case headers function fails
+  try {
+    const headersList = await headers()
+    const userAgent = headersList.get('user-agent')
+    isMobileBreakpoint = isMobile(userAgent)
+  } catch (error) {
+    console.error('Error getting User-Agent on the server:', error)
+    isMobileBreakpoint = false
+  }
+
   const { hero_image, row_1, row_2 } = data.body 
-  const headersList = await headers()
-  const userAgent = headersList.get('user-agent')
-  const isMobileBreakpoint = isMobile(userAgent)
 
   return (
     <div className={styles.container}>

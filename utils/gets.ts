@@ -4,8 +4,8 @@ export const getLandingPageData = async () => {
   try {
     const response = await fetch(API_URL)
     if (!response.ok) {
-      console.error(`Error Fetching CMS data: ${response.text()}`)
-      throw new Error('Error Fetching CMS data')
+      console.error(`Error fetching CMS data: ${response.text()}`)
+      throw new Error('Error fetching CMS data')
     }
 
     const responseData = await response.json()
@@ -13,5 +13,6 @@ export const getLandingPageData = async () => {
     return data
   } catch (error) {
     console.error('An error ocurred during data fetching', error)
+    return null
   }
 }

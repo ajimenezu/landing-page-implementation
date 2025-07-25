@@ -13,9 +13,16 @@
     justify-center
 }
 
+.cardTitle {
+  @apply
+    md:text-xs
+    md:font-medium
+}
+
 .cardDescription {
   color: variables.$text-subhead;
   @apply
     text-[11px]
     font-medium
+    md:text-xs
 }
